@@ -1,0 +1,32 @@
+---
+name: Blender 2.83
+icon_path: $ROOT_PIPELINE\_config\icons\blender.png
+tags:
+  - PoleBlender
+
+environment:
+  BLENDER_VERSION: 2.83
+  BLENDER_NAME: BLENDER_$BLENDER_VERSION
+  BLENDER_APPLICATION: Blender $BLENDER_VERSION
+  BLENDER_DIRECTORY: C:\Program Files\Blender Foundation\Blender $BLENDER_VERSION
+  BLENDER_LOCATION: $BLENDER_DIRECTORY
+  ROOT_PIPELINE: c:\pipeline
+  CGRU_VERSION: 2.3.1
+  CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
+  CGRU_PYTHON: $CGRU_LOCATION\lib\python
+  AF_ROOT: $CGRU_LOCATION\afanasy
+  AF_PYTHON: $AF_ROOT\python
+  PYTHONHOME: $CGRU_LOCATION\python
+  PYTHONPATH: $PYTHONHOME;$CGRU_PYTHON;$AF_PYTHON
+  PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
+  BLENDER_CGRU_PATH: $CGRU_LOCATION\plugins\blender
+  BLENDER_USER_SCRIPTS: $BLENDER_CGRU_PATH
+  
+tasks:
+  - name: Launch $BLENDER_APPLICATION
+    raw:
+      command: "cd $BLENDER_DIRECTORY && blender.exe"
+      async: True
+      open_terminal: False
+    
+...

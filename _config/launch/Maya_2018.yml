@@ -1,0 +1,39 @@
+---
+name: Maya 2018
+icon_path: $ROOT_PIPELINE\_config\icons\autodesk\maya.png
+tags:
+  - Pole3D
+
+environment:
+  ROOT_PIPELINE: c:\pipeline
+  CGRU_VERSION: 2.3.1
+  CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
+  CGRU_PYTHON: $CGRU_LOCATION\lib\python
+  AF_ROOT: $CGRU_LOCATION\afanasy
+  AF_PYTHON: $AF_ROOT\python
+  MAYA_VERSION: 2018
+  MAYA_NAME: MAYA_$MAYA_VERSION
+  MAYA_APPLICATION: Maya $MAYA_VERSION
+  MAYA_DIRECTORY: C:\Program Files\Autodesk\Maya$MAYA_VERSION
+  MAYA_DISABLE_CIP: 1
+  MAYA_DISABLE_CLIC_IPM: 1
+  MAYA_DISABLE_CER: 1
+  FLEXLM_TIMEOUT: 3000000
+  MAYA_DISABLE_OPENCL: 1
+  APP_DIR: $MAYA_DIRECTORY
+  APP_EXE: $MAYA_DIRECTORY\bin\maya.exe
+  MAYA_LOCATION: $APP_DIR;C:\Program Files\Autodesk\Maya$MAYA_VERSION
+  MAYA_CGRU_LOCATION: $CGRU_LOCATION\plugins\maya
+  PYTHONPATH: $MAYA_CGRU_LOCATION;$AF_PYTHON;$CGRU_PYTHON;$MAYA_CGRU_LOCATION\afanasy;$CGRU_LOCATION\python
+  MAYA_CGRU_MENUS_NAME: CGRU
+  PYHTONHOME: $MAYA_LOCATION
+  
+
+tasks:
+  - name: Launch $MAYA_APPLICATION
+    raw:
+      command: "cd $MAYA_DIRECTORY\\bin && maya.exe $LAUNCH_ARGS"
+      async: True
+      open_terminal: False
+    register_status: True
+...

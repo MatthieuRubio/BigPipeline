@@ -1,0 +1,22 @@
+---
+ProdTest:
+  - dnstech
+  - renderman
+  
+Rnd:
+  - bousselier
+  - anthony.bousselier
+  - Matthieu
+Pole3D:
+  - Matthieu
+  - Graphiste
+  - Terry
+  - Ludo
+PoleBlender:
+  - Matthieu
+It_Managers:
+  - dnstech
+everyone:
+  - $ProdTest
+
+

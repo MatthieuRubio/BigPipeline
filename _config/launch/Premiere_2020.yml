@@ -1,0 +1,29 @@
+---
+name: Premiere Pro 2020
+icon_path: $ROOT_PIPELINE\_config\icons\adobe\Premiere-512.png
+tags:
+  - Pole3D
+
+environment:
+  ROOT_PIPELINE: c:\pipeline
+  CGRU_VERSION: 2.3.1
+  CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
+  CGRU_PYTHON: $CGRU_LOCATION\lib\python
+  AF_ROOT: $CGRU_LOCATION\afanasy
+  AF_PYTHON: $AF_ROOT\python
+  PYTHONHOME: $CGRU_LOCATION\python
+  PYTHONPATH: $PYTHONHOME;$CGRU_PYTHON;$AF_PYTHON
+  PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
+  PREMIERE_PRO_VERSION: 2020
+  PREMIERE_PRO_NAME: Adobe Premiere Pro $PREMIERE_PRO_VERSION
+  PREMIERE_PRO_APPLICATION: Adobe Premiere Pro $PREMIERE_PRO_VERSION
+  PREMIERE_PRO_DIRECTORY: C:\Program Files\Adobe\$PREMIERE_PRO_APPLICATION
+
+tasks:
+  - name: Launch $PREMIERE_PRO_APPLICATION
+    raw:
+      command: "\"$PREMIERE_PRO_DIRECTORY\\Adobe Premiere Pro.exe\""
+      async: True
+      open_terminal: False
+    register_status: True
+...

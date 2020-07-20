@@ -1,0 +1,25 @@
+---
+name: CGRU
+icon_path: $ROOT_PIPELINE\_config\icons\cgru.png
+tags:
+  - Pole3D
+
+environment:
+  ROOT_PIPELINE: c:\pipeline
+  CGRU_VERSION: 2.3.1
+  CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
+  CGRU_PYTHON: $CGRU_LOCATION\lib\python
+  AF_ROOT: $CGRU_LOCATION\afanasy
+  AF_PYTHON: $AF_ROOT\python
+  PYTHONHOME: $CGRU_LOCATION\python
+  PYTHONPATH: $PYTHONHOME;$CGRU_PYTHON;$AF_PYTHON
+  PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
+
+tasks:
+  - name: Launch $PREMIERE_PRO_APPLICATION
+    raw:
+      command: "\"$CGRU_LOCATION\\start.cmd\""
+      async: True
+      open_terminal: False
+    register_status: True
+...

@@ -1,0 +1,30 @@
+---
+name: After Effect 2020
+icon_path: $ROOT_PIPELINE\_config\icons\adobe\After Effects-512.png
+tags:
+  - Pole3D
+
+environment:
+  ROOT_PIPELINE: c:\pipeline
+  CGRU_VERSION: 2.3.1
+  CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
+  CGRU_PYTHON: $CGRU_LOCATION\lib\python
+  AF_ROOT: $CGRU_LOCATION\afanasy
+  AF_PYTHON: $AF_ROOT\python
+  PYTHONHOME: $CGRU_LOCATION\python
+  PYTHONPATH: $PYTHONHOME;$CGRU_PYTHON;$AF_PYTHON
+  PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
+  AFTER_VERSION: 2020
+  AFTER_NAME: Adobe After Effects $AFTER_VERSION
+  AFTER_APPLICATION: Adobe After Effects $AFTER_VERSION
+  AFTER_DIRECTORY: C:\Program Files\Adobe\$AFTER_APPLICATION\Support Files
+  LAUNCH_ARGS: -m
+
+tasks:
+  - name: Launch $AFTER_APPLICATION
+    raw:
+      command: "\"$AFTER_DIRECTORY\\AfterFX.exe\" $LAUNCH_ARGS"
+      async: True
+      open_terminal: False
+    register_status: True
+...
