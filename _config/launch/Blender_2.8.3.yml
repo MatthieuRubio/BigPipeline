@@ -2,7 +2,7 @@
 name: Blender 2.83
 icon_path: $ROOT_PIPELINE\_config\icons\blender.png
 tags:
-  - PoleBlender
+  - Pole3D
 
 environment:
   BLENDER_VERSION: 2.83
