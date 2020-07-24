@@ -21,6 +21,6 @@ tasks:
     raw:
       command: "\"$AF_SERVER_PATH\\afwatch.cmd\""
       async: True
-      open_terminal: True
+      open_terminal: False
     register_status: True
 ...
