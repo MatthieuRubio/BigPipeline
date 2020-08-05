@@ -19,7 +19,7 @@ environment:
 tasks:
   - name: Launch AFServer
     raw:
-      command: start http://192.168.1.232:51000
+      command: start http://192.168.1.200:51000
       async: True
       open_terminal: False
     register_status: True

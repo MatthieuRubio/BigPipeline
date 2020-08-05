@@ -18,6 +18,8 @@ environment:
   3DS_NAME: 3DSMAX_$3DS_VERSION
   3DS_APPLICATION: 3ds Max $3DS_VERSION
   3DS_DIRECTORY: C:\Program Files\Autodesk\$3DS_APPLICATION
+  LAUNCH_ARGS: -u MAXScript $CGRU_LOCATION\plugins\max\startup.ms
+  WorkDir3dsmax: 3DS_DIRECTORY
 
 tasks:
   - name: Launch $3DS_APPLICATION
