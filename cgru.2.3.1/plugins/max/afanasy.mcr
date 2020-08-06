@@ -13,6 +13,7 @@ local endFrame = rendEnd.frame as integer
 local byFrame = rendNThFrame
 local taskFrameNumber = 1
 local seqFrameNumber = 1
+local WorkingDirectory = systemTools.getEnvVariable "WorkDir3dsmax"
 
 persistent global AfOutputImage
 persistent global AfUseSceneWDir
@@ -82,7 +83,7 @@ rollout AfanasyDialog "Afanasy"
 -- Working directory:
    checkbox useSceneWDirControl "Use scene folder as WDir" checked:AfUseSceneWDir toolTip:"Use scene folder as working directory."
    label workingDirectoryLabel "Specify Working Directory:"
-   edittext workingDirectoryControl text:AfWorkingDirectory toolTip:"Specify working directory."
+   edittext workingDirectoryControl text:WorkingDirectory toolTip:"Specify working directory."
 -- Batch views:
    dropdownlist batchControl "Render Batch View" items:BatchViewNames toolTip:"Render batch view."
 -- Priority:
