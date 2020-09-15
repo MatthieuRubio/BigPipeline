@@ -7,14 +7,16 @@ toolTip:"Render by Afanasy..."
 rendTimeType = 3
 
 -- Set initial parameters:
-local jobname = maxFileName
+local jobname = getFilenameFile maxfilename
 local startFrame = rendStart.frame as integer
 local endFrame = rendEnd.frame as integer
 local byFrame = rendNThFrame
 local taskFrameNumber = 1
 local seqFrameNumber = 1
 local WorkingDirectory = systemTools.getEnvVariable "WorkDir3dsmax"
-
+local ExcludeWorstation = "station.*"
+local IncludeServeur = "serveur.*"
+	
 persistent global AfOutputImage
 persistent global AfUseSceneWDir
 persistent global AfWorkingDirectory
@@ -28,14 +30,14 @@ persistent global AfExcludeHosts
 persistent global AfSaveTempScene
 persistent global AfStartPaused
 
-if AfPriority           == undefined then AfPriority           = -1
+if AfPriority           == undefined then AfPriority           = 50
 if AfMaxHosts           == undefined then AfMaxHosts           = -1
 if AfCapacity           == undefined then AfCapacity           = -1
 if AfOutputImage        == undefined then AfOutputImage        = ""
 if AfWorkingDirectory   == undefined then AfWorkingDirectory   = ""
 if AfDependMask         == undefined then AfDependMask         = ""
 if AfGlobalMask         == undefined then AfGlobalMask         = ""
-if AfHostsMask          == undefined then AfHostsMask          = ""
+if AfHostsMask          == undefined then AfHostsMask          = "serveur.*"
 if AfExcludeHosts       == undefined then AfExcludeHosts       = ""
 if AfSaveTempScene      == undefined then AfSaveTempScene      = false
 if AfStartPaused        == undefined then AfStartPaused        = false

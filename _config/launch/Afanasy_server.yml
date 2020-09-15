@@ -2,7 +2,7 @@
 name: AF Server
 icon_path: $ROOT_PIPELINE\_config\icons\AFServer.png
 tags:
-  - Pole3D
+  - afanasy
 
 environment:
   ROOT_PIPELINE: c:\pipeline

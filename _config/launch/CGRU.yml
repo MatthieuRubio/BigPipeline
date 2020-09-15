@@ -2,7 +2,7 @@
 name: CGRU
 icon_path: $ROOT_PIPELINE\_config\icons\cgru.png
 tags:
-  - Pole3D
+  - afanasy
 
 environment:
   ROOT_PIPELINE: c:\pipeline

@@ -1,23 +1,43 @@
 ---
-ProdTest:
-  - dnstech
-  - renderman
-  
-Rnd:
-  - bousselier
-  - anthony.bousselier
-  - Matthieu
 Pole3D:
   - Matthieu
-  - Graphiste
   - Terry
   - Ludo
+  - Maxime
+  - Jacques
+  - William
+  - Jean-philippe
+  - Bénédicte
+
+Pole2D:
+  - Malik
+  - Lucas
+  - Alex
+  - Damien
+  - Pierrick
+  
+Other:
+  - Graphiste
   - Administrateur
-PoleBlender:
-  - Matthieu
+  - Utilisateur
+
+afanasy:
+  - $Pole3D
+  - $Pole2D
+  - $Other
+adobe:
+  - $Pole3D
+  - $Pole2D
+  - $Other
+autodesk:
+  - $Pole3D
+  - $Pole2D
+  - $Other
+blender:
+  - $Pole3D
+  - $Pole2D
+  - $Other
 It_Managers:
   - dnstech
 everyone:
   - $ProdTest
-
-

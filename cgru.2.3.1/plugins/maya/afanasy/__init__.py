@@ -14,6 +14,8 @@ import pymel.core as pm
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)
 
+hostmaskServeur = "serveur.*"
+hostMaskWorkstation = "station.*"
 
 renderer_to_block_type = {
     'arnold': 'maya_arnold',
@@ -178,7 +180,7 @@ class UI(object):
                 pm.text(l='Host Mask')
                 pm.textField(
                     'cgru_afanasy__hosts_mask',
-                    text=pm.optionVar.get('cgru_afanasy__hosts_mask_ov', '')
+                    text=hostmaskServeur
                 )
 
             with pm.rowLayout(nc=2, adj=2, cw2=(labels_width, 50)):

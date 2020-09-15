@@ -2,7 +2,7 @@
 name: Illustrator 2020
 icon_path: $ROOT_PIPELINE\_config\icons\adobe\Illustrator-512.png
 tags:
-  - Pole3D
+  - adobe
 
 environment:
   ROOT_PIPELINE: c:\pipeline

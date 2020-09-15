@@ -2,7 +2,7 @@
 name: Maya 2020
 icon_path: $ROOT_PIPELINE\_config\icons\autodesk\maya.png
 tags:
-  - Pole3D
+  - autodesk
 
 environment:
   ROOT_PIPELINE: c:\pipeline
@@ -32,6 +32,7 @@ environment:
   MAYA_CGRU_MENUS_NAME: CGRU
   APP_DIR: $MAYA_DIRECTORY
   APP_EXE: $MAYA_DIRECTORY\bin\maya.exe
+  LAUNCH_ARGS: -script C:\pipeline\cgru.2.3.1\plugins\maya\CGRU.mel
 
 tasks:
   - name: Launch $MAYA_APPLICATION

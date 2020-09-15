@@ -2,7 +2,7 @@
 name: 3ds Max 2019
 icon_path: $ROOT_PIPELINE\_config\icons\autodesk\3dsmax.png
 tags:
-  - Pole3D
+  - autodesk
 
 environment:
   ROOT_PIPELINE: c:\pipeline

@@ -2,7 +2,7 @@
 name: After Effect 2020
 icon_path: $ROOT_PIPELINE\_config\icons\adobe\After Effects-512.png
 tags:
-  - Pole3D
+  - adobe
 
 environment:
   ROOT_PIPELINE: c:\pipeline
@@ -18,6 +18,7 @@ environment:
   AFTER_NAME: Adobe After Effects $AFTER_VERSION
   AFTER_APPLICATION: Adobe After Effects $AFTER_VERSION
   AFTER_DIRECTORY: C:\Program Files\Adobe\$AFTER_APPLICATION\Support Files
+  AFTER_SETUP: $CGRU_LOCATION\plugins\afterfx\Setup_After.jsx 
   LAUNCH_ARGS: -m
 
 tasks:

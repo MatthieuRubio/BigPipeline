@@ -1,10 +1,15 @@
 ---
-name: InDesign 2020
-icon_path: $ROOT_PIPELINE\_config\icons\adobe\InDesign-512.png
+name: Blender 2.90
+icon_path: $ROOT_PIPELINE\_config\icons\blender.png
 tags:
-  - adobe
+  - blender
 
 environment:
+  BLENDER_VERSION: 2.90
+  BLENDER_NAME: BLENDER_$BLENDER_VERSION
+  BLENDER_APPLICATION: Blender $BLENDER_VERSION
+  BLENDER_DIRECTORY: C:\Program Files\Blender Foundation\Blender $BLENDER_VERSION
+  BLENDER_LOCATION: $BLENDER_DIRECTORY
   ROOT_PIPELINE: c:\pipeline
   CGRU_VERSION: 2.3.1
   CGRU_LOCATION: $ROOT_PIPELINE\cgru.$CGRU_VERSION
@@ -14,16 +19,14 @@ environment:
   PYTHONHOME: $CGRU_LOCATION\python
   PYTHONPATH: $PYTHONHOME;$CGRU_PYTHON;$AF_PYTHON
   PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
-  INDESIGN_VERSION: 2020
-  INDESIGN_NAME: Adobe InDesign $INDESIGN_VERSION
-  INDESIGN_APPLICATION: Adobe InDesign $INDESIGN_VERSION
-  INDESIGN_DIRECTORY: C:\Program Files\Adobe\$INDESIGN_APPLICATION
-
+  BLENDER_CGRU_PATH: $CGRU_LOCATION\plugins\blender
+  BLENDER_USER_SCRIPTS: $BLENDER_CGRU_PATH
+  
 tasks:
-  - name: Launch $INDESIGN_APPLICATION
+  - name: Launch $BLENDER_APPLICATION
     raw:
-      command: "\"$INDESIGN_DIRECTORY\\InDesign.exe\""
+      command: "cd $BLENDER_DIRECTORY && blender.exe"
       async: True
       open_terminal: False
-    register_status: True
+    
 ...

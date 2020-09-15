@@ -2,7 +2,7 @@
 name: Maya 2018
 icon_path: $ROOT_PIPELINE\_config\icons\autodesk\maya.png
 tags:
-  - Pole3D
+  - autodesk
 
 environment:
   ROOT_PIPELINE: c:\pipeline
@@ -27,6 +27,7 @@ environment:
   PYTHONPATH: $MAYA_CGRU_LOCATION;$AF_PYTHON;$CGRU_PYTHON;$MAYA_CGRU_LOCATION\afanasy;$CGRU_LOCATION\python
   MAYA_CGRU_MENUS_NAME: CGRU
   PYHTONHOME: $MAYA_LOCATION
+  LAUNCH_ARGS: -script C:\pipeline\cgru.2.3.1\plugins\maya\CGRU.mel
   
 
 tasks:

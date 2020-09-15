@@ -1,6 +1,6 @@
 ---
-name: Blender 2.83
-icon_path: $ROOT_PIPELINE\_config\icons\blender.png
+name: tkinter_test
+icon_path: $ROOT_PIPELINE\_config\icons\CGRU.png
 tags:
   - Pole3D
 
@@ -21,12 +21,14 @@ environment:
   PATH: $CGRU_LOCATION\dll;$CGRU_LOCATION\bin;$CGRU_LOCATION\software_setup\bin;$CGRU_LOCATION\python;$AF_ROOT\bin;$PYTHONPATH;$PATH
   BLENDER_CGRU_PATH: $CGRU_LOCATION\plugins\blender
   BLENDER_USER_SCRIPTS: $BLENDER_CGRU_PATH
+  TOOLS_PATH: $ROOT_PIPELINE\Tools\Set_project_big
+  TOOLS_PATH2: C:\pipeline\Tools\Set_project_big
   
 tasks:
-  - name: Launch $BLENDER_APPLICATION
+  - name: Launch Set Project
     raw:
-      command: "cd $BLENDER_DIRECTORY && blender.exe"
+      command: "\"python -m tkinter --version\""
       async: True
-      open_terminal: False
+      open_terminal: True
     
 ...

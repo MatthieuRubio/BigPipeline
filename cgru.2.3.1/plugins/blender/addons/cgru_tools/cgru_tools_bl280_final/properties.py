@@ -89,7 +89,7 @@ class CGRUProperties(bpy.types.PropertyGroup):
         name='Hosts Mask',
         description='Hosts to run pattern',
         maxlen=512,
-        default='station.*')
+        default='')
     hostsmaskexclude : StringProperty(
         name='Exclude Hosts',
         description='Hosts to ignore pattern',

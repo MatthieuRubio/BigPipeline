@@ -2,7 +2,7 @@
 name: Blender 2.82
 icon_path: $ROOT_PIPELINE\_config\icons\blender.png
 tags:
-  - Pole3D
+  - blender
 
 environment:
   BLENDER_VERSION: 2.82

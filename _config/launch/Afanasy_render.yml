@@ -2,7 +2,7 @@
 name: AF Render
 icon_path: $ROOT_PIPELINE\_config\icons\AFRender.png
 tags:
-  - Pole3D
+  - afanasy
 
 environment:
   ROOT_PIPELINE: c:\pipeline
